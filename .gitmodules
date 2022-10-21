@@ -1,0 +1,3 @@
+[submodule "3rdparty/SFML.Net"]
+	path = 3rdparty/SFML.Net
+	url = https://github.com/SFML/SFML.Net.git
