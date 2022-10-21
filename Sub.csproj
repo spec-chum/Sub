@@ -7,4 +7,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="3rdparty\**" />
+    <EmbeddedResource Remove="3rdparty\**" />
+    <None Remove="3rdparty\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="3rdparty\SFML.Net\src\SFML.Net\SFML.Net.csproj" />
+  </ItemGroup>
+
 </Project>
