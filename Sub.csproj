@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -8,13 +8,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="3rdparty\**" />
-    <EmbeddedResource Remove="3rdparty\**" />
-    <None Remove="3rdparty\**" />
+    <Content Include="Shaders\**">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="3rdparty\SFML.Net\src\SFML.Net\SFML.Net.csproj" />
+    <Compile Remove="SFML.Net\**" />
+    <EmbeddedResource Remove="SFML.Net\**" />
+    <None Remove="SFML.Net\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="SFML.Net\src\SFML.Net\SFML.Net.csproj" />
   </ItemGroup>
 
 </Project>
